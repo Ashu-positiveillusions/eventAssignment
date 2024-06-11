@@ -1,13 +1,13 @@
-import { atom } from 'recoil';
+import { atom } from "recoil";
 
 const eventsListState = atom({
-  key: 'eventsList',
-  default: [], // Initial empty array for events
+  key: "eventsList",
+  default: [],
 });
 
 const selectedEventState = atom({
-  key: 'selectedEvent',
-  default: null, // Initially no selected event
+  key: "selectedEvent",
+  default: null,
 });
 
 export { eventsListState, selectedEventState };

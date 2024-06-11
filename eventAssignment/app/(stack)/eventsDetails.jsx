@@ -7,10 +7,9 @@ import { useNavigation } from "expo-router";
 
 const EventDetails = () => {
   const selectedEvent = useRecoilValue(selectedEventState);
-  const [isVisible, setIsVisible] = useState(true); // Action sheet visibility state
+  const [isVisible, setIsVisible] = useState(true);
   const navigation = useNavigation();
   const handleBuyTicket = () => {
-    // Implement logic for handling ticket purchase (e.g., navigate to a ticket purchase screen)
     console.log("Buy Ticket clicked!");
     navigation.navigate("claimTicket");
   };
@@ -46,30 +45,6 @@ const EventDetails = () => {
           <Text>Address: </Text>
           <Text>{address}</Text>
         </View>
-        <View style={[styles.actionSheetDetails, { flexDirection: "row" }]}>
-          <Text>Details: </Text>
-          <Text>{details}</Text>
-        </View>
-        <View style={[styles.actionSheetDetails, { flexDirection: "row" }]}>
-          <Text>Details: </Text>
-          <Text>{details}</Text>
-        </View>
-        <View style={[styles.actionSheetDetails, { flexDirection: "row" }]}>
-          <Text>Details: </Text>
-          <Text>{details}</Text>
-        </View>
-        <View style={[styles.actionSheetDetails, { flexDirection: "row" }]}>
-          <Text>Details: </Text>
-          <Text>{details}</Text>
-        </View>
-        <View style={[styles.actionSheetDetails, { flexDirection: "row" }]}>
-          <Text>Details: </Text>
-          <Text>{details}</Text>
-        </View>
-        <View style={[styles.actionSheetDetails, { flexDirection: "row" }]}>
-          <Text>Details: </Text>
-          <Text>{details}</Text>
-        </View>
 
         <TouchableOpacity
           style={styles.buyTicketButton}
@@ -102,16 +77,8 @@ const EventDetails = () => {
             >
               <MaterialIcons name="arrow-back-ios" size={24} color="white" />
             </TouchableOpacity>
-            {/* <Text style={styles.eventName}>{selectedEvent.name}</Text> */}
             <Text style={styles.eventName}>Event Details</Text>
           </View>
-          {/* <Text style={styles.eventName}>{selectedEvent.name}</Text> */}
-          {/* <TouchableOpacity
-            style={styles.detailsButton}
-            onPress={handleShowActionSheet}
-          >
-            <Text style={styles.detailsButtonText}>Details of the Event</Text>
-          </TouchableOpacity> */}
         </>
       )}
       {isVisible && (
@@ -128,7 +95,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "space-between",
-    // backgroundColor:'red'
   },
   eventImage: {
     position: "absolute",
@@ -138,7 +104,7 @@ const styles = StyleSheet.create({
     bottom: 0,
     width: "100%",
     height: "100%",
-    resizeMode: "cover", // Adjust as needed
+    resizeMode: "cover", 
   },
   eventName: {
     fontSize: 20,
@@ -151,14 +117,14 @@ const styles = StyleSheet.create({
     backgroundColor: "aqua",
     padding: 15,
     borderRadius: 5,
-    flexDirection: "row", // Arrange button text and icon (if needed)
-    alignItems: "center", // Center elements vertically
+    flexDirection: "row", 
+    alignItems: "center", 
     width: "50%",
   },
   detailsButtonText: {
     fontSize: 16,
     color: "#000",
-    flex: 1, // Allow text to grow within available space
+    flex: 1, 
   },
   actionSheetContainer: {
     flex: 1,
@@ -196,7 +162,7 @@ const styles = StyleSheet.create({
   buyTicketButtonText: {
     fontSize: 16,
     color: "#fff",
-    textAlign: "center", // Center text horizontally within button
+    textAlign: "center",
   },
   backButton: {
     position: "relative",
